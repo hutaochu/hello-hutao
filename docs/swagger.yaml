@@ -1,0 +1,32 @@
+definitions:
+  services.Hello:
+    properties:
+      message:
+        type: string
+      name:
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /api/v1/hello:
+    get:
+      consumes:
+      - application/json
+      description: get hello
+      parameters:
+      - description: name
+        in: query
+        name: name
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/services.Hello'
+      summary: get hello
+      tags:
+      - Hello-hutao
+swagger: "2.0"
