@@ -6,6 +6,15 @@ definitions:
       name:
         type: string
     type: object
+  services.User:
+    properties:
+      avatarUrl:
+        type: string
+      email:
+        type: string
+      name:
+        type: string
+    type: object
 info:
   contact: {}
 paths:
@@ -28,5 +37,26 @@ paths:
             $ref: '#/definitions/services.Hello'
       summary: get hello
       tags:
-      - Hello-hutao
+      - hello-hutao
+  /api/v1/user/register:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: user info
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/services.User'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/services.Hello'
+      summary: user register
+      tags:
+      - user
 swagger: "2.0"

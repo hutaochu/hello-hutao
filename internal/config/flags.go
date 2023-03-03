@@ -8,7 +8,7 @@ import (
 
 var env string
 
-func init() {
+func InitEnv() {
 	flag.StringVar(&env, "env", constants.DevEnviroment, "application env")
 	flag.Parse()
 }

@@ -21,14 +21,14 @@ type EnvConfig struct {
 
 var envConfig *EnvConfig
 
-func init() {
+func InitConfig() {
 	v := viper.New()
 
 	v.SetConfigType("yaml")
 	v.SetConfigName(GetEnv())
 	v.AddConfigPath("config")
 
-	err := viper.ReadInConfig()
+	err := v.ReadInConfig()
 	if err != nil {
 		log.Fatal("init config error: ", err)
 	}

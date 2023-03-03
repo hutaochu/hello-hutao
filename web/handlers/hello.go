@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/hutaochu/hello-hutao/internal/pkg/services"
+	"github.com/hutaochu/hello-hutao/internal/services"
 )
 
 // @BasePath /api/v1
@@ -17,7 +17,7 @@ import (
 // @Param name query string false "name"
 // @Success 200 {object} services.Hello
 // @Router /api/v1/hello [get]
-func SayHello(c *gin.Context) {
-	name := c.Query("name")
-	c.JSON(http.StatusOK, services.SayHello(name))
+func SayHello(ctx *gin.Context) {
+	name := ctx.Query("name")
+	ctx.JSON(http.StatusOK, services.SayHello(name))
 }
