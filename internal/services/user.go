@@ -22,7 +22,7 @@ func Register(user User) error {
 }
 
 // Login 登陆
-func Login() {}
+func Login(email, password string) {}
 
 // Logout 退出
 func Logout() {}
@@ -31,10 +31,12 @@ func Logout() {}
 func Logoff() {}
 
 // ModifyPassword 修改密码
-func ModifyPassword() {}
+func ModifyPassword(userId int, new, old string) {}
 
 // ResetPassword 重制密码
-func ResetPassword() {}
+func ResetPassword(userId int) {}
 
 // SetPassword 设置密码
-func SetPassword() {}
+func SetPassword(userId int, passsword string) {
+
+}

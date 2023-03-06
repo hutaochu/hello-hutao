@@ -21,3 +21,7 @@ func (m *User) TableName() string {
 func AddUser(user *User) error {
 	return db.Create(user).Error
 }
+
+func GetUser(userId int) (*User, error) {
+
+}
