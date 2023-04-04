@@ -23,7 +23,7 @@ func Register(ctx *gin.Context) {
 		ctx.JSON(http.StatusBadRequest, gin.H{"error": "bad request"})
 		return
 	}
-	err := services.Register(user)
+	err := services.Register(ctx, user)
 	if err != nil {
 		ctx.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return

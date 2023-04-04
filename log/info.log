@@ -1,0 +1,6 @@
+{"level":"info","ts":1680605287.966576,"msg":"request logger","url":"/apis/v1/hello","method":"GET","body":"","latency":0.000096832}
+{"level":"info","ts":1680605595.555177,"msg":"request logger","url":"/apis/v1/hello","method":"GET","body":"","latency":2.000253534,"trace-id":"db6f3f3a-989e-4e65-ad6d-2edaa32426a3"}
+{"level":"info","ts":1680605650.895825,"msg":"request logger","url":"/apis/v1/hello?name=test","method":"GET","body":"","latency":2.000097525,"trace-id":"5eee37de-8d2c-4350-a916-3ec6d78c405b"}
+{"level":"info","ts":1680605653.0604649,"msg":"request logger","url":"/apis/v1/hello?name=test","method":"GET","body":"","latency":2.000338776,"trace-id":"a000e608-d058-41ee-b28f-4a6911baf593"}
+{"level":"info","ts":1680605764.59317,"msg":"request logger","url":"/apis/v1/hello?name=test","method":"GET","body":"","latency":2.000670501,"trace-id":"d412ce85-5f54-4e29-9960-4b74d0b9a6ab","client-ip":"::1"}
+{"level":"info","ts":1680605817.572311,"msg":"request logger","url":"/apis/v1/hello?name=test","method":"GET","body":"","latency":2.001126808,"trace-id":"fe17390b-3a41-441f-9ba1-d369e622fdff","client-ip":"127.0.0.1"}

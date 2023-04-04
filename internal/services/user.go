@@ -1,6 +1,7 @@
 package services
 
 import (
+	"context"
 	"github.com/hutaochu/hello-hutao/internal/entity"
 )
 
@@ -11,13 +12,13 @@ type User struct {
 }
 
 // Register 注册
-func Register(user User) error {
+func Register(ctx context.Context, user User) error {
 	u := &entity.User{
 		Name:      user.Name,
 		AvatarUrl: user.AvatarUrl,
 		Email:     user.Email,
 	}
-	err := entity.AddUser(u)
+	err := entity.AddUser(ctx, u)
 	return err
 }
 

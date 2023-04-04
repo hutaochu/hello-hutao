@@ -14,6 +14,7 @@ import (
 	"github.com/hutaochu/hello-hutao/docs"
 	"github.com/hutaochu/hello-hutao/internal/config"
 	"github.com/hutaochu/hello-hutao/internal/entity"
+	"github.com/hutaochu/hello-hutao/internal/middleware"
 	"github.com/hutaochu/hello-hutao/web"
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
@@ -23,11 +24,13 @@ func main() {
 	config.InitEnv()
 	config.InitConfig()
 	entity.DBOpen()
-
 	router := gin.Default()
 	docs.SwaggerInfo.BasePath = ""
 
-	v1 := router.Group("/api/v1")
+	v1 := router.Group("/apis/v1")
+	v1.Use(middleware.Trace())
+	v1.Use(middleware.RequestLogger())
+
 	web.Routes(v1)
 
 	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))

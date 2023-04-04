@@ -1,13 +1,14 @@
 package entity
 
 import (
+	"context"
 	"time"
 )
 
 type User struct {
-	ID        uint      `gorm:"column:id;AUTO_INCREMENT;primary_key"`        // id
-	Name      string    `gorm:"column:name;NOT NULL"`                        // user name
-	AvatarUrl string    `gorm:"column:avatar_url"`                           // user name
+	Id        uint      `gorm:"column:id;AUTO_INCREMENT;primary_key"`        // id
+	Name      string    `gorm:"column:name;NOT NULL"`                        // name
+	AvatarUrl string    `gorm:"column:avatar_url"`                           // avatar url
 	Email     string    `gorm:"column:email;unique;NOT NULL"`                // user email
 	Password  string    `gorm:"column:password;NOT NULL"`                    // user login password
 	CreatedAt time.Time `gorm:"column:created_at;default:CURRENT_TIMESTAMP"` // create time
@@ -18,10 +19,15 @@ func (m *User) TableName() string {
 	return "user_tab"
 }
 
-func AddUser(user *User) error {
-	return db.Create(user).Error
+func AddUser(ctx context.Context, user *User) error {
+	return db.WithContext(ctx).Create(user).Error
 }
 
-func GetUser(userId int) (*User, error) {
-
+func GetUser(ctx context.Context, userId int) (*User, error) {
+	var user User
+	err := db.WithContext(ctx).Find(&user).Where("id = ?", userId).Error
+	if err != nil {
+		return nil, err
+	}
+	return &user, nil
 }
