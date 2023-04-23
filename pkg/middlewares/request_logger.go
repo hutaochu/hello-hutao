@@ -1,10 +1,11 @@
-package middleware
+package middlewares
 
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"github.com/hutaochu/hello-hutao/internal/constant"
-	"github.com/hutaochu/hello-hutao/internal/utils/logger"
+	"github.com/hutaochu/hello-hutao/constants"
+	"github.com/hutaochu/hello-hutao/pkg/utils"
+	"github.com/hutaochu/hello-hutao/pkg/utils/logger"
 	"go.uber.org/zap"
 	"time"
 )
@@ -16,7 +17,7 @@ func RequestLogger() gin.HandlerFunc {
 
 		method := context.Request.Method
 		clientIP := context.ClientIP()
-		traceId, _ := context.Get(constant.TraceId)
+		traceId := utils.GetTraceId(context)
 		url := getUrl(context)
 		body := getBody(context)
 		latency := time.Since(startTime)
@@ -25,9 +26,9 @@ func RequestLogger() gin.HandlerFunc {
 			With(zap.String("method", method)).
 			With(zap.String("body", body)).
 			With(zap.Duration("latency", latency)).
-			With(zap.String(constant.TraceId, traceId.(string))).
+			With(zap.String(constants.TraceId, traceId)).
 			With(zap.String("client-ip", clientIP)).
-			Info("request logger")
+			Info("request log")
 	}
 }
 

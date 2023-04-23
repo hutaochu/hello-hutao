@@ -1,4 +1,4 @@
-package entity
+package entities
 
 import (
 	"context"
@@ -23,9 +23,9 @@ func AddUser(ctx context.Context, user *User) error {
 	return db.WithContext(ctx).Create(user).Error
 }
 
-func GetUser(ctx context.Context, userId int) (*User, error) {
+func GetUser(ctx context.Context, userName string) (*User, error) {
 	var user User
-	err := db.WithContext(ctx).Find(&user).Where("id = ?", userId).Error
+	err := db.WithContext(ctx).Find(&user).Where("name = ?", userName).Error
 	if err != nil {
 		return nil, err
 	}

@@ -1,4 +1,9 @@
 definitions:
+  res.GetPublicKeyResponse:
+    properties:
+      key:
+        type: string
+    type: object
   services.Hello:
     properties:
       message:
@@ -8,7 +13,7 @@ definitions:
     type: object
   services.User:
     properties:
-      avatarUrl:
+      avatar_url:
         type: string
       email:
         type: string
@@ -59,4 +64,19 @@ paths:
       summary: user register
       tags:
       - user
+  /public_key:
+    get:
+      consumes:
+      - application/json
+      description: get public key from server, use this to encryption
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/res.GetPublicKeyResponse'
+      summary: get public key
+      tags:
+      - hello-hutao
 swagger: "2.0"

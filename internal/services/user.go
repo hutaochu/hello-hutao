@@ -2,7 +2,10 @@ package services
 
 import (
 	"context"
-	"github.com/hutaochu/hello-hutao/internal/entity"
+	"errors"
+	"github.com/hutaochu/hello-hutao/internal/entities"
+	"github.com/hutaochu/hello-hutao/internal/types/req"
+	"gorm.io/gorm"
 )
 
 type User struct {
@@ -12,13 +15,23 @@ type User struct {
 }
 
 // Register 注册
-func Register(ctx context.Context, user User) error {
-	u := &entity.User{
+func Register(ctx context.Context, user req.RegisterRequest) error {
+	u, err := entities.GetUser(ctx, user.Name)
+	if err != nil && err != gorm.ErrRecordNotFound {
+		return err
+	}
+	if u != nil && u.Name != "" {
+		// username is invalid
+		return errors.New("duplicate username")
+	}
+	// 处理密码
+	newUser := &entities.User{
 		Name:      user.Name,
 		AvatarUrl: user.AvatarUrl,
 		Email:     user.Email,
+		Password:  user.Password,
 	}
-	err := entity.AddUser(ctx, u)
+	err = entities.AddUser(ctx, newUser)
 	return err
 }
 

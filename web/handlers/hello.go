@@ -1,13 +1,12 @@
 package handlers
 
 import (
-	"net/http"
-	"time"
-
 	"github.com/gin-gonic/gin"
 	"github.com/hutaochu/hello-hutao/internal/services"
+	"github.com/hutaochu/hello-hutao/pkg/utils"
 )
 
+// SayHello
 // @BasePath /api/v1
 // @Summary get hello
 // @Schemes
@@ -20,6 +19,6 @@ import (
 // @Router /api/v1/hello [get]
 func SayHello(ctx *gin.Context) {
 	name := ctx.Query("name")
-	time.Sleep(2 * time.Second)
-	ctx.JSON(http.StatusOK, services.SayHello(name))
+	r := services.SayHello(name)
+	utils.SetResponse(ctx, r)
 }

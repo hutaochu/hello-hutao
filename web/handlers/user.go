@@ -1,6 +1,8 @@
 package handlers
 
 import (
+	"github.com/hutaochu/hello-hutao/internal/types/req"
+	"github.com/hutaochu/hello-hutao/pkg/utils"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -18,18 +20,19 @@ import (
 // @Success 200 {object} services.Hello
 // @Router /api/v1/user/register [post]
 func Register(ctx *gin.Context) {
-	var user services.User
+	var user req.RegisterRequest
 	if err := ctx.ShouldBindBodyWith(&user, binding.JSON); err != nil {
-		ctx.JSON(http.StatusBadRequest, gin.H{"error": "bad request"})
+		ctx.JSON(http.StatusBadRequest, gin.H{"error": "bad req"})
 		return
 	}
 	err := services.Register(ctx, user)
 	if err != nil {
-		ctx.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		utils.SetError(ctx, err)
 		return
 	}
-
-	ctx.JSON(http.StatusOK, gin.H{"message": "register successfully"})
+	r := make(map[string]string)
+	r["message"] = "register successfully"
+	utils.SetResponse(ctx, r)
 }
 
 // Login 登陆

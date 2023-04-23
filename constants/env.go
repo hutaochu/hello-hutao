@@ -1,7 +1,7 @@
 package constants
 
 const (
-	DevEnviroment  = "dev"
-	TestEnviroment = "test"
-	LiveEnviroment = "live"
+	DevEnvironment  = "dev"
+	TestEnvironment = "test"
+	LiveEnvironment = "live"
 )

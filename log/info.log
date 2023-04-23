@@ -4,3 +4,94 @@
 {"level":"info","ts":1680605653.0604649,"msg":"request logger","url":"/apis/v1/hello?name=test","method":"GET","body":"","latency":2.000338776,"trace-id":"a000e608-d058-41ee-b28f-4a6911baf593"}
 {"level":"info","ts":1680605764.59317,"msg":"request logger","url":"/apis/v1/hello?name=test","method":"GET","body":"","latency":2.000670501,"trace-id":"d412ce85-5f54-4e29-9960-4b74d0b9a6ab","client-ip":"::1"}
 {"level":"info","ts":1680605817.572311,"msg":"request logger","url":"/apis/v1/hello?name=test","method":"GET","body":"","latency":2.001126808,"trace-id":"fe17390b-3a41-441f-9ba1-d369e622fdff","client-ip":"127.0.0.1"}
+{"level":"info","ts":1680750281.0281742,"msg":"request logger","url":"/apis/v1/hello?name=na","method":"GET","body":"","latency":2000.006518581,"trace-id":"07436b0b-0576-44f7-acc4-61e5d46d9412","client-ip":"::1"}
+{"level":"info","ts":1682239500.7633321,"msg":"server start to listen on: 8080"}
+{"level":"info","ts":1682239521.7201412,"msg":"req logger","url":"/apis/v1/hello","method":"GET","body":"","latency":2.000479403,"trace-id":"60e0cab4-1d54-40ad-bdd0-86cd5731b4d0","client-ip":"::1"}
+{"level":"info","ts":1682239541.17447,"msg":"req logger","url":"/apis/v1/hello?name=name","method":"GET","body":"","latency":2.001157071,"trace-id":"ee2ec9f0-2924-438e-9dce-0f91368f3a98","client-ip":"::1"}
+{"level":"info","ts":1682239546.2187378,"msg":"req logger","url":"/apis/v1/hello?name=name","method":"GET","body":"","latency":2.000145613,"trace-id":"e30ab267-698d-42e6-86b5-62e300e7bbd4","client-ip":"::1"}
+{"level":"info","ts":1682239569.9469671,"msg":"Start shutdown server with signal: interrupt"}
+{"level":"info","ts":1682239569.947194,"msg":"Server shutdown"}
+{"level":"info","ts":1682239573.8792992,"msg":"server start to listen on: 8080"}
+{"level":"info","ts":1682239600.305503,"msg":"req logger","url":"/apis/v1/hello?name=name","method":"GET","body":"","latency":0.000327488,"trace-id":"0ec2d468-cc15-419b-8012-c0b7d5e51cb3","client-ip":"::1"}
+{"level":"info","ts":1682239617.860016,"msg":"Start shutdown server with signal: interrupt"}
+{"level":"info","ts":1682239617.860217,"msg":"Server shutdown"}
+{"level":"info","ts":1682239639.241031,"msg":"server start to listen on: 8080"}
+{"level":"info","ts":1682239642.480879,"msg":"req logger","url":"/apis/v1/hello?name=name","method":"GET","body":"","latency":0.0001958,"trace-id":"1dec34a7-2352-4222-bec8-cda0a4b49710","client-ip":"::1"}
+{"level":"info","ts":1682239653.7684531,"msg":"req logger","url":"/apis/v1/hello?name=name","method":"GET","body":"","latency":0.000042904,"trace-id":"da40f3f0-1a11-4887-9507-cf64f576ea04","client-ip":"::1"}
+{"level":"info","ts":1682239667.638601,"msg":"req logger","url":"/apis/v1/hello?name=name","method":"GET","body":"","latency":0.000060892,"trace-id":"15be4758-5dfa-456d-b3fe-56192029d712","client-ip":"::1"}
+{"level":"info","ts":1682239675.9735491,"msg":"Start shutdown server with signal: interrupt"}
+{"level":"info","ts":1682239675.97378,"msg":"Server shutdown"}
+{"level":"info","ts":1682242685.2810261,"msg":"server start to listen on: 8080"}
+{"level":"error","ts":1682242703.257257,"msg":"read public key err","error":"open ../../cert/public.pem: no such file or directory","trace-id":""}
+{"level":"error","ts":1682242715.003623,"msg":"read public key err","error":"open ../../cert/public.pem: no such file or directory","trace-id":""}
+{"level":"info","ts":1682242857.27751,"msg":"Start shutdown server with signal: interrupt"}
+{"level":"info","ts":1682242857.2784882,"msg":"Server shutdown"}
+{"level":"info","ts":1682242861.891327,"msg":"server start to listen on: 8080"}
+{"level":"error","ts":1682242870.682092,"msg":"read public key err","error":"open ../../cert/public.pem: no such file or directory","trace-id":""}
+{"level":"info","ts":1682242870.682123,"msg":"get public key","trace-id":""}
+{"level":"info","ts":1682242923.391741,"msg":"Start shutdown server with signal: interrupt"}
+{"level":"info","ts":1682242923.391962,"msg":"Server shutdown"}
+{"level":"info","ts":1682242931.555331,"msg":"server start to listen on: 8080"}
+{"level":"error","ts":1682242931.722698,"msg":"read public key err","error":"open ../../cert/public.pem: no such file or directory","trace-id":""}
+{"level":"error","ts":1682242932.3912709,"msg":"read public key err","error":"open ../../cert/public.pem: no such file or directory","trace-id":""}
+{"level":"error","ts":1682242936.67954,"msg":"read public key err","error":"open ../../cert/public.pem: no such file or directory","trace-id":""}
+{"level":"error","ts":1682242938.636074,"msg":"read public key err","error":"open ../../cert/public.pem: no such file or directory","trace-id":""}
+{"level":"info","ts":1682243004.8346581,"msg":"Start shutdown server with signal: interrupt"}
+{"level":"info","ts":1682243004.8349671,"msg":"Server shutdown"}
+{"level":"info","ts":1682243010.350605,"msg":"server start to listen on: 8080"}
+{"level":"error","ts":1682243011.622575,"msg":"read public key err","error":"open ../../cert/public.pem: no such file or directory","trace-id":""}
+{"level":"error","ts":1682243011.622616,"msg":"handle response get error","error":"open ../../cert/public.pem: no such file or directory","trace-id":""}
+{"level":"info","ts":1682243053.9748302,"msg":"Start shutdown server with signal: interrupt"}
+{"level":"info","ts":1682243053.975052,"msg":"Server shutdown"}
+{"level":"info","ts":1682243057.1485388,"msg":"server start to listen on: 8080"}
+{"level":"error","ts":1682243059.3888488,"msg":"read public key err","error":"open ../cert/public.pem: no such file or directory","trace-id":""}
+{"level":"error","ts":1682243059.3889,"msg":"handle response get error","error":"open ../cert/public.pem: no such file or directory","trace-id":""}
+{"level":"info","ts":1682243067.476115,"msg":"Start shutdown server with signal: interrupt"}
+{"level":"info","ts":1682243067.476448,"msg":"Server shutdown"}
+{"level":"info","ts":1682243070.761869,"msg":"server start to listen on: 8080"}
+{"level":"error","ts":1682243074.212062,"msg":"read public key err","error":"open ../../../cert/public.pem: no such file or directory","trace-id":""}
+{"level":"error","ts":1682243074.212109,"msg":"handle response get error","error":"open ../../../cert/public.pem: no such file or directory","trace-id":""}
+{"level":"info","ts":1682243163.388006,"msg":"Start shutdown server with signal: interrupt"}
+{"level":"info","ts":1682243163.3881888,"msg":"Server shutdown"}
+{"level":"info","ts":1682243185.692679,"msg":"server start to listen on: 8080"}
+{"level":"info","ts":1682243187.5157561,"msg":"get public key","trace-id":""}
+{"level":"info","ts":1682243246.1933131,"msg":"Start shutdown server with signal: interrupt"}
+{"level":"info","ts":1682243246.193624,"msg":"Server shutdown"}
+{"level":"info","ts":1682243249.3566568,"msg":"server start to listen on: 8080"}
+{"level":"info","ts":1682243250.167713,"msg":"get public key","trace-id":""}
+{"level":"info","ts":1682243286.880726,"msg":"get public key","trace-id":""}
+{"level":"info","ts":1682243542.015539,"msg":"Start shutdown server with signal: interrupt"}
+{"level":"info","ts":1682243542.01607,"msg":"Server shutdown"}
+{"level":"info","ts":1682243547.1671739,"msg":"server start to listen on: 8080"}
+{"level":"error","ts":1682243550.484651,"msg":"read public key err","error":"open /Users/dingyuan.wu/Library/Caches/JetBrains/GoLand2023.1/tmp/GoLand/___hello_hutao/cert/public.pem: not a directory","trace-id":""}
+{"level":"error","ts":1682243550.4986508,"msg":"handle response get error","error":"open /Users/dingyuan.wu/Library/Caches/JetBrains/GoLand2023.1/tmp/GoLand/___hello_hutao/cert/public.pem: not a directory","trace-id":""}
+{"level":"info","ts":1682243624.990974,"msg":"Start shutdown server with signal: interrupt"}
+{"level":"info","ts":1682243624.991159,"msg":"Server shutdown"}
+{"level":"info","ts":1682243628.365501,"msg":"server start to listen on: 8080"}
+{"level":"error","ts":1682243632.110877,"msg":"read public key err","error":"open /Users/dingyuan.wu/Library/Caches/JetBrains/GoLand2023.1/tmp/cert/public.pem: no such file or directory","trace-id":""}
+{"level":"error","ts":1682243632.110925,"msg":"handle response get error","error":"open /Users/dingyuan.wu/Library/Caches/JetBrains/GoLand2023.1/tmp/cert/public.pem: no such file or directory","trace-id":""}
+{"level":"info","ts":1682243808.769419,"msg":"Start shutdown server with signal: interrupt"}
+{"level":"info","ts":1682243808.769641,"msg":"Server shutdown"}
+{"level":"info","ts":1682243925.371835,"msg":"server start to listen on: 8080"}
+{"level":"error","ts":1682243930.690811,"msg":"read public key err","error":"open /Users/dingyuan.wu/github/cert/public.pem: no such file or directory","trace-id":""}
+{"level":"error","ts":1682243930.690868,"msg":"handle response get error","error":"open /Users/dingyuan.wu/github/cert/public.pem: no such file or directory","trace-id":""}
+{"level":"info","ts":1682243951.223146,"msg":"Start shutdown server with signal: interrupt"}
+{"level":"info","ts":1682243951.2233331,"msg":"Server shutdown"}
+{"level":"info","ts":1682243954.178446,"msg":"server start to listen on: 8080"}
+{"level":"info","ts":1682243956.075371,"msg":"Start shutdown server with signal: interrupt"}
+{"level":"info","ts":1682243956.0755289,"msg":"Server shutdown"}
+{"level":"info","ts":1682244001.562797,"msg":"server start to listen on: 8080"}
+{"level":"info","ts":1682244031.16752,"msg":"Start shutdown server with signal: interrupt"}
+{"level":"info","ts":1682244031.16776,"msg":"Server shutdown"}
+{"level":"info","ts":1682244361.179799,"msg":"server start to listen on: 8080"}
+{"level":"info","ts":1682244389.3252952,"msg":"Start shutdown server with signal: interrupt"}
+{"level":"info","ts":1682244389.325624,"msg":"Server shutdown"}
+{"level":"info","ts":1682244406.1322649,"msg":"server start to listen on: 8080"}
+{"level":"info","ts":1682244456.361872,"msg":"Start shutdown server with signal: interrupt"}
+{"level":"info","ts":1682244456.362185,"msg":"Server shutdown"}
+{"level":"info","ts":1682244457.789154,"msg":"server start to listen on: 8080"}
+{"level":"info","ts":1682244474.203753,"msg":"Start shutdown server with signal: interrupt"}
+{"level":"info","ts":1682244474.203978,"msg":"Server shutdown"}
+{"level":"info","ts":1682244479.4397209,"msg":"server start to listen on: 8080"}
+{"level":"info","ts":1682244521.616797,"msg":"Start shutdown server with signal: interrupt"}
+{"level":"info","ts":1682244521.617075,"msg":"Server shutdown"}

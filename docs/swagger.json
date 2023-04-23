@@ -67,9 +67,40 @@
                     }
                 }
             }
+        },
+        "/public_key": {
+            "get": {
+                "description": "get public key from server, use this to encryption",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "hello-hutao"
+                ],
+                "summary": "get public key",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/res.GetPublicKeyResponse"
+                        }
+                    }
+                }
+            }
         }
     },
     "definitions": {
+        "res.GetPublicKeyResponse": {
+            "type": "object",
+            "properties": {
+                "key": {
+                    "type": "string"
+                }
+            }
+        },
         "services.Hello": {
             "type": "object",
             "properties": {
@@ -84,7 +115,7 @@
         "services.User": {
             "type": "object",
             "properties": {
-                "avatarUrl": {
+                "avatar_url": {
                     "type": "string"
                 },
                 "email": {
